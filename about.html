@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ClientGuard360 helps law firms verify clients, assess injury claims, and monitor cases through a single platform.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About | ClientGuard360">
+  <meta property="og:description" content="ClientGuard360 helps law firms verify clients, assess injury claims, and monitor cases through a single platform.">
+  <meta property="og:image" content="img/og-image.png">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <title>About | ClientGuard360</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    .page-hero {
+      padding-top: calc(var(--nav-h) + clamp(56px,7vw,88px));
+      padding-bottom: clamp(48px,6vw,64px);
+      background: var(--bg);
+      position: relative; overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 700px 400px at 15% 0%,   rgba(24,185,217,0.07) 0%, transparent 65%),
+        radial-gradient(ellipse 500px 350px at 85% 100%, rgba(139,92,246,0.05) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .page-hero__inner { max-width: 720px; }
+    .page-hero__eyebrow { margin-bottom: 16px; }
+    .page-hero__headline {
+      font-size: clamp(34px,5vw,60px); font-weight: 800;
+      letter-spacing: -0.03em; line-height: 1.08; margin-bottom: 20px;
+    }
+    .page-hero__body {
+      font-size: clamp(15px,1.8vw,18px); color: var(--muted);
+      line-height: 1.75; margin-bottom: 16px;
+    }
+
+    .about-section { padding: clamp(64px,8vw,96px) 0; }
+    .about-section--soft { background: var(--bg-soft); }
+
+    .about-inner { max-width: 720px; }
+    .about-headline {
+      font-size: clamp(24px,3.5vw,36px); font-weight: 700;
+      letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 20px;
+    }
+    .about-body { font-size: 15px; color: var(--muted); line-height: 1.8; margin-bottom: 16px; }
+
+    .about-services {
+      display: grid; grid-template-columns: repeat(3,1fr); gap: var(--gap);
+      margin-top: 32px;
+    }
+    .about-svc {
+      padding: 24px 22px;
+      background: var(--bg); border: 1px solid var(--border);
+      border-radius: var(--radius); box-shadow: var(--shadow-sm);
+    }
+    .about-svc__stripe { height: 3px; border-radius: 2px; margin-bottom: 16px; }
+    .about-svc__stripe--cyan { background: var(--cyan-mid); }
+    .about-svc__stripe--violet { background: linear-gradient(90deg, var(--violet-mid), var(--magenta)); }
+    .about-svc__stripe--magenta { background: var(--magenta); }
+    .about-svc__title { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+    .about-svc__body { font-size: 13.5px; color: var(--muted); line-height: 1.6; }
+
+    @media (max-width: 760px) {
+      .about-services { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<site-header></site-header>
+
+
+<!-- ── HERO ──────────────────────────────────────── -->
+<section class="page-hero">
+  <div class="wrap">
+    <div class="page-hero__inner">
+
+      <div class="anim">
+        <div class="page-hero__eyebrow eyebrow">About ClientGuard360</div>
+        <h1 class="page-hero__headline">
+          Better data.<br>
+          <span class="grad">Better decisions.</span>
+        </h1>
+        <p class="page-hero__body">
+          CG360 gives law firms the information they need to evaluate cases with confidence, serve their clients effectively, and avoid spending time and money on cases built on incomplete or inaccurate data.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ── THE THREE SERVICES ────────────────────────── -->
+<section class="about-section about-section--soft">
+  <div class="wrap">
+
+    <div class="about-inner anim">
+      <div class="section-label" style="margin-bottom:16px;"><span>What We Do</span><span></span></div>
+      <h2 class="about-headline">
+        Three services for <span class="grad">case-level clarity.</span>
+      </h2>
+      <p class="about-body">
+        Firms make better decisions when they have accurate client data, a clear picture of the injury claim, and current information throughout the life of the case. CG360 provides all three through a single platform, helping firms reduce wasted spend and focus their resources on the cases that matter.
+      </p>
+    </div>
+
+    <div class="about-services anim d2">
+      <a href="client-verification.html" class="about-svc" style="text-decoration:none; color:inherit;">
+        <div class="about-svc__stripe about-svc__stripe--cyan"></div>
+        <div class="about-svc__title">Client Verification</div>
+        <p class="about-svc__body">Confirm client identity and validate key information at the point of intake, before investing in the case.</p>
+      </a>
+      <a href="injury-verification.html" class="about-svc" style="text-decoration:none; color:inherit;">
+        <div class="about-svc__stripe about-svc__stripe--violet"></div>
+        <div class="about-svc__title">Injury Verification</div>
+        <p class="about-svc__body">Retrieve health records and assess injury claims so case evaluation is informed by evidence, not assumptions.</p>
+      </a>
+      <a href="client-monitoring.html" class="about-svc" style="text-decoration:none; color:inherit;">
+        <div class="about-svc__stripe about-svc__stripe--magenta"></div>
+        <div class="about-svc__title">Client Monitoring</div>
+        <p class="about-svc__body">Track changes to client information through the life of the case without manual follow-up.</p>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ── CTA ─────────────────────────────────────────── -->
+<section class="cta-banner">
+  <div class="wrap">
+    <div class="cta-banner__inner anim">
+      <div class="cta-accent">
+        <div class="cta-accent__title">Already have cases in progress?</div>
+        <div class="cta-accent__body">The same three services can be applied to your existing caseload. It's a fast way to surface gaps in client data, reassess injury claims, and get current on cases that may have gone stale.</div>
+      </div>
+      <div>
+        <h2 class="cta-banner__title">Want to learn more? <span class="grad">Let's talk.</span></h2>
+        <p class="cta-banner__body">Tell us where you are and we'll walk you through how CG360 can help.</p>
+      </div>
+      <div class="cta-banner__actions">
+        <a href="contact.html" class="btn-primary">Get Started</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<site-footer></site-footer>
+<script src="js/components.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

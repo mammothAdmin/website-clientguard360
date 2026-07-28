@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Talk to us about client verification, injury verification, or client monitoring for your firm.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Get Started | ClientGuard360">
+  <meta property="og:description" content="Talk to us about client verification, injury verification, or client monitoring for your firm.">
+  <meta property="og:image" content="img/og-image.png">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <title>Get Started | ClientGuard360</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    .contact-page {
+      padding-top: calc(var(--nav-h) + clamp(48px,6vw,80px));
+      padding-bottom: clamp(64px,8vw,96px);
+      background: var(--bg);
+      min-height: 100vh;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: clamp(48px,6vw,80px);
+      align-items: start;
+    }
+
+    .contact-left__eyebrow { margin-bottom: 16px; }
+    .contact-left__headline {
+      font-size: clamp(28px,4vw,48px); font-weight: 800;
+      letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 16px;
+    }
+    .contact-left__sub {
+      font-size: 16px; color: var(--muted); line-height: 1.7; margin-bottom: 36px;
+    }
+
+    .expect-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+    .expect-item { display: flex; align-items: flex-start; gap: 14px; }
+    .expect-item__icon {
+      width: 36px; height: 36px; border-radius: 9px; flex-shrink: 0;
+      background: rgba(14,165,201,0.08); border: 1px solid rgba(14,165,201,0.18);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .expect-item__title { font-size: 14px; font-weight: 700; color: var(--fg-2); margin-bottom: 2px; }
+    .expect-item__desc { font-size: 13px; color: var(--muted); line-height: 1.55; }
+
+    .form-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      padding: clamp(28px,4vw,48px);
+    }
+
+    .form-card__title { font-size: 20px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 6px; }
+    .form-card__sub { font-size: 14px; color: var(--muted); margin-bottom: 28px; }
+
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 18px; }
+    .form-group--row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+    .form-label {
+      font-size: 12px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted);
+    }
+    .form-label span { color: var(--cyan); }
+
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      padding: 11px 14px;
+      font-size: 14px; font-family: inherit;
+      color: var(--fg); background: var(--bg-soft);
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      transition: border-color 0.15s, box-shadow 0.15s;
+      outline: none;
+      appearance: none;
+    }
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--cyan);
+      box-shadow: 0 0 0 3px rgba(14,165,201,0.1);
+    }
+    .form-input::placeholder, .form-textarea::placeholder { color: var(--muted-2); }
+    .form-textarea { min-height: 100px; resize: vertical; line-height: 1.6; }
+    .form-select { background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; cursor: pointer; }
+
+    .interest-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .interest-item {
+      display: flex; align-items: center; gap: 9px;
+      padding: 10px 12px;
+      background: var(--bg-soft); border: 1.5px solid var(--border);
+      border-radius: 8px; cursor: pointer;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .interest-item:has(input:checked) {
+      border-color: var(--cyan); background: rgba(14,165,201,0.04);
+    }
+    .interest-item input { accent-color: var(--cyan); cursor: pointer; }
+    .interest-item label { font-size: 13px; font-weight: 500; color: var(--fg-2); cursor: pointer; }
+
+    .form-divider { height: 1px; background: var(--border); margin: 22px 0; }
+
+    .form-submit {
+      width: 100%; padding: 14px;
+      background: linear-gradient(90deg, var(--cyan-mid), var(--violet-mid));
+      color: #fff; font-size: 15px; font-weight: 700;
+      border: none; border-radius: 100px; cursor: pointer;
+      box-shadow: 0 4px 20px rgba(24,185,217,0.3);
+      transition: box-shadow 0.2s, transform 0.2s;
+      font-family: inherit;
+    }
+    .form-submit:hover { box-shadow: 0 6px 28px rgba(24,185,217,0.44); transform: translateY(-1px); }
+
+    .form-legal {
+      font-size: 11px; color: var(--muted-2); text-align: center;
+      margin-top: 14px; line-height: 1.6;
+    }
+    .form-legal a { color: var(--muted); text-decoration: underline; }
+
+    @media (max-width: 760px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-group--row { grid-template-columns: 1fr; }
+      .interest-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<site-header></site-header>
+
+<div class="contact-page">
+  <div class="wrap">
+    <div class="contact-grid">
+
+      <!-- ── Left ───────────────────────────────── -->
+      <div class="anim">
+        <div class="contact-left__eyebrow eyebrow">Get Started</div>
+        <h1 class="contact-left__headline">
+          Let's talk about<br>
+          <span class="grad">your intake.</span>
+        </h1>
+        <p class="contact-left__sub">
+          We'll start with a conversation about where you are and what you're trying to solve. No demo script, no pressure.
+        </p>
+
+        <ul class="expect-list">
+          <li class="expect-item">
+            <div class="expect-item__icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0ea5c9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            </div>
+            <div>
+              <div class="expect-item__title">A conversation first</div>
+              <div class="expect-item__desc">We'll ask about your current process and whether CG360 is the right fit.</div>
+            </div>
+          </li>
+          <li class="expect-item">
+            <div class="expect-item__icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0ea5c9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <div class="expect-item__title">Response within one business day</div>
+              <div class="expect-item__desc">We'll follow up to schedule a call or answer questions directly by email.</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ── Form ───────────────────────────────── -->
+      <div class="form-card anim d2">
+        <div class="form-card__title">Tell us about yourself</div>
+        <div class="form-card__sub">We'll use this to prepare for the conversation.</div>
+
+        <form action="#" method="POST">
+
+          <div class="form-group form-group--row">
+            <div class="form-group">
+              <label class="form-label" for="fname">First Name <span>*</span></label>
+              <input class="form-input" type="text" id="fname" name="first_name" placeholder="Jane" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="lname">Last Name <span>*</span></label>
+              <input class="form-input" type="text" id="lname" name="last_name" placeholder="Smith" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">Work Email <span>*</span></label>
+            <input class="form-input" type="email" id="email" name="email" placeholder="jane@yourfirm.com" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="org">Organization</label>
+            <input class="form-input" type="text" id="org" name="organization" placeholder="Firm or company name">
+          </div>
+
+          <div class="form-group">
+            <div class="form-label" style="margin-bottom:10px;">I'm interested in</div>
+            <div class="interest-grid">
+              <div class="interest-item">
+                <input type="checkbox" id="int-verify" name="interest" value="client-verification">
+                <label for="int-verify">Client Verification</label>
+              </div>
+              <div class="interest-item">
+                <input type="checkbox" id="int-injury" name="interest" value="injury-verification">
+                <label for="int-injury">Injury Verification</label>
+              </div>
+              <div class="interest-item">
+                <input type="checkbox" id="int-monitor" name="interest" value="client-monitoring">
+                <label for="int-monitor">Client Monitoring</label>
+              </div>
+              <div class="interest-item">
+                <input type="checkbox" id="int-other" name="interest" value="not-sure">
+                <label for="int-other">Not sure yet</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="message">Anything else?</label>
+            <textarea class="form-textarea" id="message" name="message" placeholder="Tell us about your situation, or just say hello."></textarea>
+          </div>
+
+          <div class="form-divider"></div>
+
+          <button type="submit" class="form-submit">
+            Send Message
+          </button>
+
+          <p class="form-legal">
+            By submitting, you agree to our <a href="privacy.html">Privacy Policy</a>.
+          </p>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<site-footer></site-footer>
+<script src="js/components.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

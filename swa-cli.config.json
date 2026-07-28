@@ -1,0 +1,12 @@
+{
+  "$schema": "https://aka.ms/azure/static-web-apps-cli/schema",
+  "configurations": {
+    "clientguard360": {
+      "appName": "website-clientguard360",
+      "resourceGroup": "RG-Lawfabric-Prod-CentralUS",
+      "appLocation": ".",
+      "outputLocation": ".",
+      "env": "production"
+    }
+  }
+}
