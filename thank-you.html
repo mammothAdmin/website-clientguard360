@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Thank you for contacting ClientGuard360.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Thank You | ClientGuard360">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <title>Thank You | ClientGuard360</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    .thank-you-page {
+      padding-top: calc(var(--nav-h) + clamp(48px,6vw,80px));
+      padding-bottom: clamp(64px,8vw,96px);
+      background: var(--bg);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .thank-you-content {
+      text-align: center;
+      max-width: 500px;
+    }
+
+    .thank-you-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 28px;
+      display: block;
+    }
+
+    .thank-you-headline {
+      font-size: clamp(28px,4vw,48px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .thank-you-sub {
+      font-size: 16px;
+      color: var(--muted);
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+
+    .thank-you-btn {
+      display: inline-block;
+      padding: 14px 32px;
+      background: linear-gradient(90deg, var(--cyan-mid), var(--violet-mid));
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(24,185,217,0.3);
+      transition: box-shadow 0.2s, transform 0.2s;
+      text-decoration: none;
+      font-family: inherit;
+    }
+    .thank-you-btn:hover {
+      box-shadow: 0 6px 28px rgba(24,185,217,0.44);
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body>
+
+<site-header></site-header>
+
+<div class="thank-you-page">
+  <div class="wrap">
+    <div class="thank-you-content">
+      <svg class="thank-you-icon" viewBox="0 0 24 24" fill="none" stroke="#0ea5c9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+
+      <h1 class="thank-you-headline">Thank you!</h1>
+
+      <p class="thank-you-sub">
+        We've received your message and appreciate you reaching out. Our team will review your inquiry and get back to you within one business day.
+      </p>
+
+      <a href="index.html" class="thank-you-btn">Return to Home</a>
+    </div>
+  </div>
+</div>
+
+<site-footer></site-footer>
+<script src="js/components.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
