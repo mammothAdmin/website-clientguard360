@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!--
+  OG Image Template | ClientGuard360
+  ─────────────────────────────────────────────────────────────────────
+  This file is a design template for generating the social sharing image
+  (og:image). It is NOT a page of the website.
+
+  TO GENERATE og-image.png:
+  1. Open this file in Chrome or Edge
+  2. Open DevTools → toggle device toolbar (Ctrl+Shift+M)
+  3. Set dimensions to exactly 1200 × 630
+  4. Screenshot the page (DevTools → ⋮ → Capture screenshot, or use
+     a full-page screenshot extension)
+  5. Save the output as img/og-image.png
+  6. The og:image tags across all pages already reference img/og-image.png
+  ─────────────────────────────────────────────────────────────────────
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200">
+  <title>OG Image Template</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 1200px; height: 630px; overflow: hidden;
+      font-family: 'Inter', sans-serif;
+      background: #0a1628;
+      color: #f8fafc;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Ambient gradients */
+    .bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 900px 600px at 10% -10%,  rgba(24,185,217,0.18) 0%, transparent 60%),
+        radial-gradient(ellipse 700px 500px at 90% 110%,  rgba(139,92,246,0.14) 0%, transparent 60%);
+    }
+
+    /* Grid overlay */
+    .grid {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    /* Content */
+    .content {
+      position: relative; z-index: 1;
+      height: 100%; display: flex; flex-direction: column;
+      padding: 52px 64px 48px;
+    }
+
+    /* Top bar */
+    .topbar {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: auto;
+    }
+
+    .brand {
+      display: flex; align-items: center; gap: 14px;
+    }
+
+    .brand-icon {
+      width: 52px; height: 52px;
+    }
+
+    .brand-name {
+      font-size: 22px; font-weight: 800; letter-spacing: -0.02em;
+    }
+
+    .brand-tag {
+      font-size: 11px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.22em; color: #18b9d9;
+      background: rgba(24,185,217,0.1); border: 1px solid rgba(24,185,217,0.25);
+      border-radius: 100px; padding: 5px 16px;
+    }
+
+    /* Main copy */
+    .main { padding-bottom: 0; }
+
+    .eyebrow {
+      font-size: 13px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.2em; color: #18b9d9; margin-bottom: 18px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .eyebrow::before {
+      content: ''; display: block;
+      width: 32px; height: 2px;
+      background: linear-gradient(90deg, #18b9d9, #8b5cf6);
+      border-radius: 1px;
+    }
+
+    .headline {
+      font-size: 64px; font-weight: 800;
+      letter-spacing: -0.04em; line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .headline .grad {
+      background: linear-gradient(135deg, #18b9d9 0%, #8b5cf6 55%, #d946ef 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .tagline {
+      font-size: 20px; font-weight: 400; color: #94a3b8;
+      letter-spacing: -0.01em; line-height: 1.5;
+    }
+
+    /* Bottom bar */
+    .bottombar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin-top: 32px;
+    }
+
+    .url { font-size: 15px; font-weight: 600; color: #475569; letter-spacing: 0.01em; }
+
+    .pills { display: flex; gap: 10px; }
+    .pill {
+      font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em;
+      padding: 5px 14px; border-radius: 100px;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+      color: #64748b;
+    }
+
+    /* Large background shield (decorative) */
+    .shield-bg {
+      position: absolute; right: -40px; top: -60px;
+      opacity: 0.04; z-index: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg"></div>
+  <div class="grid"></div>
+
+  <!-- Decorative large shield -->
+  <svg class="shield-bg" width="520" height="520" viewBox="0 0 48 48" fill="none">
+    <path d="M24 2L44 11V28L24 46L4 28V11Z" fill="none" stroke="white" stroke-width="1"/>
+    <path d="M15 24l5 5 13-14" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+
+  <div class="content">
+
+    <div class="topbar">
+      <div class="brand">
+        <svg class="brand-icon" viewBox="0 0 48 48" fill="none">
+          <rect width="48" height="48" rx="10" fill="#0f172a"/>
+          <path d="M24 8L37 15.5V32.5L24 40L11 32.5V15.5Z" fill="none" stroke="#18b9d9" stroke-width="1.5"/>
+          <path d="M18 24l4 4 7-9" fill="none" stroke="#18b9d9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="brand-name">ClientGuard360</div>
+      </div>
+      <div class="brand-tag">Client Intelligence Platform</div>
+    </div>
+
+    <div class="main">
+      <div class="eyebrow">For Legal Intake</div>
+      <h1 class="headline">
+        Verify. Assess.<br>
+        <span class="grad">Monitor.</span>
+      </h1>
+      <p class="tagline">Ensuring accurate client data today and for the life of the case.</p>
+    </div>
+
+    <div class="bottombar">
+      <div class="url">clientguard360.com</div>
+      <div class="pills">
+        <div class="pill">Law Firms</div>
+        <div class="pill">Agencies</div>
+        <div class="pill">Funders</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

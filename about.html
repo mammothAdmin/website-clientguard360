@@ -14,62 +14,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
-  <style>
-    .page-hero {
-      padding-top: calc(var(--nav-h) + clamp(56px,7vw,88px));
-      padding-bottom: clamp(48px,6vw,64px);
-      background: var(--bg);
-      position: relative; overflow: hidden;
-    }
-    .page-hero::before {
-      content: '';
-      position: absolute; inset: 0;
-      background:
-        radial-gradient(ellipse 700px 400px at 15% 0%,   rgba(24,185,217,0.07) 0%, transparent 65%),
-        radial-gradient(ellipse 500px 350px at 85% 100%, rgba(139,92,246,0.05) 0%, transparent 65%);
-      pointer-events: none;
-    }
-    .page-hero__inner { max-width: 720px; }
-    .page-hero__eyebrow { margin-bottom: 16px; }
-    .page-hero__headline {
-      font-size: clamp(34px,5vw,60px); font-weight: 800;
-      letter-spacing: -0.03em; line-height: 1.08; margin-bottom: 20px;
-    }
-    .page-hero__body {
-      font-size: clamp(15px,1.8vw,18px); color: var(--muted);
-      line-height: 1.75; margin-bottom: 16px;
-    }
-
-    .about-section { padding: clamp(64px,8vw,96px) 0; }
-    .about-section--soft { background: var(--bg-soft); }
-
-    .about-inner { max-width: 720px; }
-    .about-headline {
-      font-size: clamp(24px,3.5vw,36px); font-weight: 700;
-      letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 20px;
-    }
-    .about-body { font-size: 15px; color: var(--muted); line-height: 1.8; margin-bottom: 16px; }
-
-    .about-services {
-      display: grid; grid-template-columns: repeat(3,1fr); gap: var(--gap);
-      margin-top: 32px;
-    }
-    .about-svc {
-      padding: 24px 22px;
-      background: var(--bg); border: 1px solid var(--border);
-      border-radius: var(--radius); box-shadow: var(--shadow-sm);
-    }
-    .about-svc__stripe { height: 3px; border-radius: 2px; margin-bottom: 16px; }
-    .about-svc__stripe--cyan { background: var(--cyan-mid); }
-    .about-svc__stripe--violet { background: linear-gradient(90deg, var(--violet-mid), var(--magenta)); }
-    .about-svc__stripe--magenta { background: var(--magenta); }
-    .about-svc__title { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
-    .about-svc__body { font-size: 13.5px; color: var(--muted); line-height: 1.6; }
-
-    @media (max-width: 760px) {
-      .about-services { grid-template-columns: 1fr; }
-    }
-  </style>
 </head>
 <body>
 
