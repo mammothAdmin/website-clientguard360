@@ -109,7 +109,6 @@ class SiteFooter extends HTMLElement {
       <a href="https://www.mammothshift-labs.com" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:6px; font-size:12px; color:#64748b; text-decoration:none;">
         Powered by <img src="img/mammothshift-labs.png" width="16" height="16" alt="MammothShift Labs" style="border-radius:3px;"> MammothShift Labs
       </a>
-      <a href="privacy.html" style="font-size:13px; color:#64748b;">Privacy Policy</a>
     </div>
   </div>
 </footer>`;
